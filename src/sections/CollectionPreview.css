@@ -1,0 +1,115 @@
+.collection-preview {
+  padding: var(--space-3xl) var(--padding-x);
+  background-color: var(--color-bone);
+}
+
+.collection-preview__header {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-2xl);
+  text-align: center;
+}
+
+.collection-preview__title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: var(--space-sm);
+}
+
+.collection-preview__subtitle {
+  font-size: 0.9375rem;
+  color: var(--color-sand);
+}
+
+.collection-preview__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.collection-preview__link {
+  display: block;
+}
+
+.collection-preview__image-wrapper {
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-linen);
+  margin-bottom: var(--space-md);
+}
+
+.collection-preview__image-wrapper--small {
+  aspect-ratio: 3 / 4;
+}
+
+.collection-preview__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.collection-preview__link:hover .collection-preview__image {
+  transform: scale(1.03);
+}
+
+.collection-preview__info {
+  padding: 0 var(--space-sm);
+}
+
+.collection-preview__product-name {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  margin-bottom: var(--space-xs);
+}
+
+.collection-preview__product-price {
+  font-size: 0.875rem;
+  color: var(--color-charcoal);
+}
+
+.collection-preview__stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.collection-preview__cta {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+.collection-preview__view-all {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  border-bottom: 1px solid var(--color-stone);
+  padding-bottom: 4px;
+  transition: border-color var(--duration-normal) var(--ease-smooth);
+}
+
+.collection-preview__view-all:hover {
+  border-color: var(--color-ink);
+}
+
+@media (max-width: 768px) {
+  .collection-preview {
+    padding: var(--space-2xl) var(--padding-x-mobile);
+  }
+
+  .collection-preview__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-preview__stack {
+    flex-direction: row;
+  }
+
+  .collection-preview__item {
+    flex: 1;
+  }
+}

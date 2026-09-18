@@ -1,0 +1,114 @@
+.journal-preview {
+  padding: var(--space-4xl) var(--padding-x);
+  background-color: var(--color-linen);
+}
+
+.journal-preview__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.journal-preview__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.journal-preview__title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: var(--space-sm);
+}
+
+.journal-preview__subtitle {
+  font-size: 0.9375rem;
+  color: var(--color-sand);
+}
+
+.journal-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.journal-preview__link {
+  display: block;
+}
+
+.journal-preview__image-wrapper {
+  overflow: hidden;
+  aspect-ratio: 1;
+  background-color: var(--color-bone);
+  margin-bottom: var(--space-md);
+}
+
+.journal-preview__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.journal-preview__link:hover .journal-preview__image {
+  transform: scale(1.02);
+}
+
+.journal-preview__info {
+  padding: 0 var(--space-xs);
+}
+
+.journal-preview__category {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-sand);
+  margin-bottom: var(--space-sm);
+}
+
+.journal-preview__article-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--color-ink);
+  margin-bottom: var(--space-sm);
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+
+.journal-preview__link:hover .journal-preview__article-title {
+  transform: translateX(4px);
+}
+
+.journal-preview__date {
+  font-size: 0.75rem;
+  color: var(--color-sand);
+}
+
+.journal-preview__cta {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+.journal-preview__view-all {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  border-bottom: 1px solid var(--color-stone);
+  padding-bottom: 4px;
+  transition: border-color var(--duration-normal) var(--ease-smooth);
+}
+
+.journal-preview__view-all:hover {
+  border-color: var(--color-ink);
+}
+
+@media (max-width: 768px) {
+  .journal-preview {
+    padding: var(--space-3xl) var(--padding-x-mobile);
+  }
+
+  .journal-preview__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}

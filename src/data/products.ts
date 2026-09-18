@@ -1,0 +1,256 @@
+export interface Product {
+  id: string;
+  name: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  description: string;
+  materials: string;
+  care: string;
+  colors: { name: string; hex: string }[];
+  sizes: string[];
+  images: string[];
+  isNew: boolean;
+  collection: string;
+}
+
+export const products: Product[] = [
+  {
+    id: 'cmn-merino-blazer',
+    name: 'Merino Oversized Blazer',
+    category: 'Women',
+    subcategory: 'Outerwear',
+    price: 185,
+    currency: 'GBP',
+    description: 'Unlined, dropped shoulder, horn buttons. Portuguese merino wool with a relaxed silhouette that moves between studio and street.',
+    materials: '100% Portuguese Merino Wool',
+    care: 'Dry clean only. Store on a padded hanger.',
+    colors: [
+      { name: 'Charcoal', hex: '#2C2825' },
+      { name: 'Oatmeal', hex: '#D4C9BC' },
+      { name: 'Navy', hex: '#1a2332' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    images: ['/images/products/product-01.jpg'],
+    isNew: true,
+    collection: 'The Quiet Collection',
+  },
+  {
+    id: 'cmn-organic-tee',
+    name: 'Organic Cotton T-Shirt',
+    category: 'Women',
+    subcategory: 'Tops',
+    price: 42,
+    currency: 'GBP',
+    description: '180gsm, relaxed fit, pre-washed for softness. The kind of basic that makes everything else work.',
+    materials: '100% Organic Cotton, 180gsm',
+    care: 'Machine wash cold. Hang to dry.',
+    colors: [
+      { name: 'White', hex: '#F5F0EB' },
+      { name: 'Black', hex: '#1A1715' },
+      { name: 'Stone', hex: '#9E8E7E' },
+      { name: 'Sage', hex: '#8A9A82' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    images: ['/images/products/product-02.jpg'],
+    isNew: false,
+    collection: 'Essentials',
+  },
+  {
+    id: 'cmn-selvedge-trousers',
+    name: 'Japanese Selvedge Trousers',
+    category: 'Women',
+    subcategory: 'Trousers',
+    price: 130,
+    currency: 'GBP',
+    description: '13oz raw indigo, straight leg, copper rivets. Made in Portugal from Okayama selvedge denim.',
+    materials: '100% Japanese Selvedge Denim, 13oz',
+    care: 'Wash infrequently. Cold water when needed. Hang to dry.',
+    colors: [
+      { name: 'Raw Indigo', hex: '#1a2332' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    images: ['/images/products/product-03.jpg'],
+    isNew: true,
+    collection: 'The Quiet Collection',
+  },
+  {
+    id: 'cmn-linen-trousers',
+    name: 'Linen Wide-Leg Trousers',
+    category: 'Women',
+    subcategory: 'Trousers',
+    price: 95,
+    currency: 'GBP',
+    description: 'Washed European linen, elasticated back waistband, side-seam pockets. Relaxed through the leg.',
+    materials: '100% European Linen',
+    care: 'Machine wash cold. Embrace the wrinkles.',
+    colors: [
+      { name: 'Natural', hex: '#EDE6DD' },
+      { name: 'Stone', hex: '#D4C9BC' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    images: ['/images/products/product-04.jpg'],
+    isNew: false,
+    collection: 'Essentials',
+  },
+  {
+    id: 'cmn-cashmere-rollneck',
+    name: 'Cashmere-Blend Roll Neck',
+    category: 'Women',
+    subcategory: 'Knitwear',
+    price: 120,
+    currency: 'GBP',
+    description: '70/30 wool-cashmere, ribbed cuffs, non-scratch. Warmth without weight.',
+    materials: '70% Wool, 30% Cashmere',
+    care: 'Hand wash cold. Lay flat to dry.',
+    colors: [
+      { name: 'Cream', hex: '#EDE6DD' },
+      { name: 'Charcoal', hex: '#2C2825' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    images: ['/images/products/product-01.jpg'],
+    isNew: false,
+    collection: 'Essentials',
+  },
+  {
+    id: 'cmn-field-jacket',
+    name: 'Waxed Cotton Field Jacket',
+    category: 'Women',
+    subcategory: 'Outerwear',
+    price: 245,
+    currency: 'GBP',
+    description: 'British Millerain fabric, corduroy collar, four patch pockets. Built for decades, not seasons.',
+    materials: 'British Millerain Waxed Cotton',
+    care: 'Re-proof annually. Sponge clean only.',
+    colors: [
+      { name: 'Olive', hex: '#4a5d3a' },
+      { name: 'Navy', hex: '#1a2332' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    images: ['/images/products/product-02.jpg'],
+    isNew: true,
+    collection: 'The Quiet Collection',
+  },
+  {
+    id: 'cmn-mens-oxford',
+    name: 'Organic Oxford Shirt',
+    category: 'Men',
+    subcategory: 'Shirts',
+    price: 78,
+    currency: 'GBP',
+    description: 'Relaxed collar, single chest pocket, box pleat back. The shirt that works harder than it looks.',
+    materials: '100% Organic Cotton Oxford',
+    care: 'Machine wash cold. Iron while slightly damp.',
+    colors: [
+      { name: 'White', hex: '#F5F0EB' },
+      { name: 'Blue', hex: '#8fa8b8' },
+      { name: 'Stone', hex: '#D4C9BC' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: ['/images/products/product-03.jpg'],
+    isNew: false,
+    collection: 'Essentials',
+  },
+  {
+    id: 'cmn-mens-chinos',
+    name: 'Japanese Selvedge Chinos',
+    category: 'Men',
+    subcategory: 'Trousers',
+    price: 110,
+    currency: 'GBP',
+    description: '11oz broken twill, slim-straight, YKK brass zip. Made in Portugal from Okayama fabric.',
+    materials: '100% Japanese Selvedge Cotton, 11oz',
+    care: 'Wash infrequently. Cold water when needed.',
+    colors: [
+      { name: 'Khaki', hex: '#9E8E7E' },
+      { name: 'Navy', hex: '#1a2332' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: ['/images/products/product-04.jpg'],
+    isNew: false,
+    collection: 'Essentials',
+  },
+  {
+    id: 'cmn-mens-henley',
+    name: 'Heavyweight Henley',
+    category: 'Men',
+    subcategory: 'Tops',
+    price: 58,
+    currency: 'GBP',
+    description: '240gsm cotton, three-button placket, raglan sleeve. Substantial without being stiff.',
+    materials: '100% Cotton, 240gsm',
+    care: 'Machine wash cold. Tumble dry low.',
+    colors: [
+      { name: 'White', hex: '#F5F0EB' },
+      { name: 'Charcoal', hex: '#2C2825' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: ['/images/products/product-01.jpg'],
+    isNew: false,
+    collection: 'Essentials',
+  },
+  {
+    id: 'cmn-mens-work-jacket',
+    name: 'Corduroy Work Jacket',
+    category: 'Men',
+    subcategory: 'Outerwear',
+    price: 165,
+    currency: 'GBP',
+    description: '8-wale corduroy, unlined, leather elbow patches, interior pocket. A jacket with a point of view.',
+    materials: '100% Cotton Corduroy, 8-wale',
+    care: 'Machine wash cold. Hang to dry.',
+    colors: [
+      { name: 'Brown', hex: '#6b5344' },
+      { name: 'Olive', hex: '#4a5d3a' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: ['/images/products/product-02.jpg'],
+    isNew: true,
+    collection: 'The Quiet Collection',
+  },
+];
+
+export const collections = [
+  {
+    id: 'quiet-collection',
+    name: 'The Quiet Collection',
+    season: 'Autumn / Winter 2026',
+    description: '22 pieces. No excess. Each designed to speak to the next.',
+    image: '/images/campaign/look-01.jpg',
+  },
+  {
+    id: 'essentials',
+    name: 'Essentials',
+    season: 'Permanent Collection',
+    description: 'The pieces that form the foundation. Made to last, made to repeat.',
+    image: '/images/campaign/look-02.jpg',
+  },
+];
+
+export const journalArticles = [
+  {
+    id: 'against-fifty-things',
+    title: 'The Case Against Owning Fifty Things',
+    excerpt: 'Capsule wardrobes, intentional purchasing, and why fewer garments last longer.',
+    date: 'September 2026',
+    category: 'Essays',
+    image: '/images/journal/article-01.jpg',
+  },
+  {
+    id: 'fabric-guide',
+    title: 'A Field Guide to Fabric',
+    excerpt: 'Material literacy for the non-specialist. How to read a fabric, not just a label.',
+    date: 'August 2026',
+    category: 'Material Guides',
+    image: '/images/journal/article-02.jpg',
+  },
+  {
+    id: 'lisbon-thread',
+    title: 'Lisbon, Thread by Thread',
+    excerpt: 'A photo essay on the Portuguese mills and workshops that produce our core collection.',
+    date: 'July 2026',
+    category: 'Studio Visits',
+    image: '/images/journal/article-03.jpg',
+  },
+];
