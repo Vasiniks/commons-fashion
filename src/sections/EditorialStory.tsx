@@ -15,7 +15,7 @@ export function EditorialStory() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <img
-            src="/images/editorial/lifestyle.jpg"
+            src="/images/editorial/lifestyle-2.jpg"
             alt="A garment's best version comes after the third wearing"
             className="editorial-story__image"
           />

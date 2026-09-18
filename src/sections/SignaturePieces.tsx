@@ -6,7 +6,7 @@ import './SignaturePieces.css';
 
 export function SignaturePieces() {
   const { ref, isInView } = useInView();
-  const signatureProducts = products.slice(0, 3);
+  const signatureProducts = [products[3], products[6], products[9]];
 
   return (
     <section className="signature-pieces" ref={ref}>

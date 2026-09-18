@@ -1,11 +1,14 @@
 export const navigation = {
   main: [
     { label: 'New', href: '/new' },
-    { label: 'Women', href: '/women' },
-    { label: 'Men', href: '/men' },
-    { label: 'Collections', href: '/collections' },
+    { label: 'Shop', href: '/collections' },
     { label: 'Journal', href: '/journal' },
     { label: 'About', href: '/about' },
+  ],
+  shop: [
+    { label: 'Women', href: '/women' },
+    { label: 'Men', href: '/men' },
+    { label: 'All', href: '/collections' },
   ],
   utilities: [
     { label: 'Search', href: '/search', icon: 'search' },
@@ -15,19 +18,12 @@ export const navigation = {
   footer: {
     shop: [
       { label: 'New', href: '/new' },
-      { label: 'Women', href: '/women' },
-      { label: 'Men', href: '/men' },
-      { label: 'Collections', href: '/collections' },
-    ],
-    learn: [
+      { label: 'Shop', href: '/collections' },
       { label: 'Journal', href: '/journal' },
-      { label: 'The Edit', href: '/journal' },
-      { label: 'Styling Notes', href: '/journal' },
-      { label: 'Size Guide', href: '/about' },
+      { label: 'About', href: '/about' },
     ],
-    about: [
-      { label: 'Our Story', href: '/about' },
-      { label: 'Sustainability', href: '/about' },
+    help: [
+      { label: 'Size Guide', href: '/about' },
       { label: 'Shipping', href: '/about' },
       { label: 'Returns', href: '/about' },
       { label: 'Contact', href: '/about' },

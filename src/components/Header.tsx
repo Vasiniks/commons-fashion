@@ -9,10 +9,12 @@ import './Header.css';
 export function Header() {
   const { scrollDirection, isAtTop } = useScrollDirection();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isShopOpen, setIsShopOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsShopOpen(false);
   }, [location]);
 
   useEffect(() => {
@@ -38,13 +40,38 @@ export function Header() {
 
           <nav className="header__nav" aria-label="Main navigation">
             {navigation.main.map((item) => (
-              <Link
+              <div
                 key={item.href}
-                to={item.href}
-                className={`header__nav-link ${location.pathname === item.href ? 'header__nav-link--active' : ''}`}
+                className={`header__nav-item ${item.href === '/collections' ? 'header__nav-item--has-dropdown' : ''}`}
+                onMouseEnter={() => item.href === '/collections' && setIsShopOpen(true)}
+                onMouseLeave={() => item.href === '/collections' && setIsShopOpen(false)}
               >
-                {item.label}
-              </Link>
+                <Link
+                  to={item.href}
+                  className={`header__nav-link ${location.pathname === item.href ? 'header__nav-link--active' : ''}`}
+                >
+                  {item.label}
+                </Link>
+                {item.href === '/collections' && isShopOpen && (
+                  <motion.div
+                    className="header__dropdown"
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    {navigation.shop.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        to={sub.href}
+                        className="header__dropdown-link"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -104,6 +131,15 @@ export function Header() {
                     <Link to={item.href} className="mobile-menu__link">
                       {item.label}
                     </Link>
+                    {item.href === '/collections' && (
+                      <div className="mobile-menu__sub">
+                        {navigation.shop.map((sub) => (
+                          <Link key={sub.href} to={sub.href} className="mobile-menu__sub-link">
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </nav>

@@ -30,19 +30,6 @@ export function Footer() {
             <h4 className="footer__column-title">Shop</h4>
             <ul className="footer__column-list">
               {navigation.footer.shop.map((item) => (
-                <li key={item.href}>
-                  <Link to={item.href} className="footer__link">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="footer__column">
-            <h4 className="footer__column-title">Learn</h4>
-            <ul className="footer__column-list">
-              {navigation.footer.learn.map((item) => (
                 <li key={item.label}>
                   <Link to={item.href} className="footer__link">
                     {item.label}
@@ -53,9 +40,9 @@ export function Footer() {
           </div>
 
           <div className="footer__column">
-            <h4 className="footer__column-title">About</h4>
+            <h4 className="footer__column-title">Help</h4>
             <ul className="footer__column-list">
-              {navigation.footer.about.map((item) => (
+              {navigation.footer.help.map((item) => (
                 <li key={item.label}>
                   <Link to={item.href} className="footer__link">
                     {item.label}

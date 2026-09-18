@@ -104,6 +104,12 @@ npm run build
 npm run preview
 ```
 
+## GitHub Pages Deployment
+
+1. Add `homepage` to `package.json` (e.g., `"homepage": "https your-username.github.io/commons-fashion"`)
+2. In GitHub repo: Settings → Pages → Branch: `main`, Folder: `/ (root)`
+3. Deploy. The build outputs to `dist/` as static assets.
+
 ## Design Decisions
 
 - **Color Palette:** Warm neutrals (Linen #F5F0EB, Bone #EDE6DD, Stone #D4C9BC, Charcoal #2C2825, Ink #1A1715)

@@ -4,14 +4,16 @@ import { products } from '../data/products';
 import { ProductCard } from '../components/ProductCard';
 import './CollectionPage.css';
 
-type Category = 'All' | 'Women' | 'Men';
+type Subcategory = 'All' | 'Outerwear' | 'Tops' | 'Trousers' | 'Knitwear' | 'Shirts';
 
 export function CollectionPage() {
-  const [activeCategory, setActiveCategory] = useState<Category>('All');
+  const [activeSub, setActiveSub] = useState<Subcategory>('All');
 
-  const filteredProducts = activeCategory === 'All'
+  const filteredProducts = activeSub === 'All'
     ? products
-    : products.filter(p => p.category === activeCategory);
+    : products.filter(p => p.subcategory === activeSub);
+
+  const subcategories: Subcategory[] = ['All', 'Outerwear', 'Tops', 'Trousers', 'Knitwear', 'Shirts'];
 
   return (
     <main className="collection-page">
@@ -35,11 +37,11 @@ export function CollectionPage() {
       </div>
 
       <div className="collection-page__filters">
-        {(['All', 'Women', 'Men'] as Category[]).map((cat) => (
+        {subcategories.map((cat) => (
           <button
             key={cat}
-            className={`collection-page__filter ${activeCategory === cat ? 'collection-page__filter--active' : ''}`}
-            onClick={() => setActiveCategory(cat)}
+            className={`collection-page__filter ${activeSub === cat ? 'collection-page__filter--active' : ''}`}
+            onClick={() => setActiveSub(cat)}
           >
             {cat}
           </button>

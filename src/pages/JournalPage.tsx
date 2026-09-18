@@ -65,7 +65,7 @@ export function JournalPage() {
         >
           <div className="journal-page__featured-image">
             <img
-              src="/images/editorial/lifestyle.jpg"
+              src="/images/editorial/studio-portrait.jpg"
               alt="The quiet wardrobe"
             />
           </div>

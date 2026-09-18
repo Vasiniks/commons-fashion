@@ -10,7 +10,7 @@ export function FinalCTA() {
     <section className="final-cta" ref={ref}>
       <div className="final-cta__background">
         <motion.img
-          src="/images/campaign/look-02.jpg"
+          src="/images/campaign/hero-alt.jpg"
           alt="An empty room with morning light"
           className="final-cta__image"
           initial={{ scale: 1.05 }}
